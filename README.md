@@ -20,7 +20,7 @@ Een praktische walkthrough voor het opzetten, beveiligen en beheren van een Ubun
 * **Native Nginx:** Geïnstalleerd en live gezet op het IP-adres `192.168.56.101`.
 * **Netwerkcontrole:** IP-adres geverifieerd via `ip a` op interface `enp0s8`.
 
-![Nginx Default Page & IP Controle](assets/01-nginx-default.png)
+![Nginx Default Page & IP Controle](Assets/01-nginx-default.png)
 
 ---
 
@@ -28,8 +28,8 @@ Een praktische walkthrough voor het opzetten, beveiligen en beheren van een Ubun
 * **Custom Web Application:** In `/var/www/html` de standaard Nginx-pagina vervangen door een eigen geschreven HTML-applicatie.
 * **Port Mapping:** Nginx geconfigureerd om ook te luisteren op poort `8080`.
 
-![Custom Web App Live](assets/03-custom-webapp-default.png)
-![Nginx op Poort 8080](assets/04-ngix-8080.png)
+![Custom Web App Live](Assets/03-custom-webapp-default.png)
+![Nginx op Poort 8080](Assets/04-ngix-8080.png)
 
 ---
 
@@ -38,8 +38,8 @@ Een praktische walkthrough voor het opzetten, beveiligen en beheren van een Ubun
 * **Database Beheer:** Verbinding gemaakt met de container via `docker exec -it cloud-db psql -U postgres`.
 * **SQL Uitvoering:** Relationale database opgebouwd en gevuld met gegevens via `CREATE TABLE users` en `INSERT INTO users`.
 
-![PostgreSQL Container Setup](assets/05-docker-postgress-setup.png)
-![PostgreSQL Tabellen & Data Invoeren](assets/07-postgres-table-created.png)
+![PostgreSQL Container Setup](Assets/05-docker-postgress-setup.png)
+![PostgreSQL Tabellen & Data Invoeren](Assets/07-postgres-table-created.png)
 
 ---
 
@@ -51,19 +51,19 @@ Een praktische walkthrough voor het opzetten, beveiligen en beheren van een Ubun
 * **SSH Key-based Authentication:** ED25519 SSH-sleutel geconfigureerd en via `ssh-copy-id` naar de server gepusht.
 * **Server Hardening:** Wachtwoord-authenticatie uitgeschakeld. Pogingen om via wachtwoord in te loggen (`ssh -o PubkeyAuthentication=no`) worden geweigerd met `Permission denied (publickey)`.
 
-![Authenticatie Logs Bekijken](assets/08-auth.log.monitoring.png)
-![SSH Bruteforce Test in Logs](assets/09-ssh-bruteforce.test.png)
-![SSH Connection Refused Error](assets/10.ssh.connection.refusedpng)
-![Fail2ban Status](assets/11-fail2ban-status.png)
-![SSH Key Setup & Test](assets/12-ssh-key-setup.png)
-![Server Hardening - Wachtwoord Inloggen Blocked](assets/14-ssh-password-disabled.png)
+![Authenticatie Logs Bekijken](Assets/08-auth.log.monitoring.png)
+![SSH Bruteforce Test in Logs](Assets/09-ssh-bruteforce.test.png)
+![SSH Connection Refused Error](Assets/10.ssh.connection.refusedpng)
+![Fail2ban Status](Assets/11-fail2ban-status.png)
+![SSH Key Setup & Test](Assets/12-ssh-key-setup.png)
+![Server Hardening - Wachtwoord Inloggen Blocked](Assets/14-ssh-password-disabled.png)
 
 ---
 
 ### 5. Troubleshooting & Container Logging
 * Live verzoeken en statuscodes (`200 OK`, `404 Not Found`) gemonitord via de containerlogs (`docker logs`).
 
-![Docker Container Live Logs](assets/15-docker-container-logs.png)
+![Docker Container Live Logs](Assets/15-docker-container-logs.png)
 
 ---
 
